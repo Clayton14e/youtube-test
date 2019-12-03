@@ -1,0 +1,19 @@
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.heading{
+  background-color: #ff9f6f;
+  width: 100%;
+}
+
+.heading h1{
+  padding-left: 10%;
+  color: white;
+  display: inline-block;
+}
+.search{
+  text-align: center;
+  padding: 10px;
+}

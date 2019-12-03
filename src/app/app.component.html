@@ -1,10 +1,23 @@
 <div class='content'>
   <div class='heading'>
-    <h1>The Heading</h1>
-
+    <div class='heading-title'>
+      <h1>The Heading</h1>
+    </div>
+    <div class='search'>
+      <input id='user-input' [(ngModel)]='input'>
+      <button id='search-button' (click)='onClick()'>Search</button>
+    </div>
   </div>
-  <div class='search'>
-    <input [(ngModel)]='input'>
-    <button (click)='onClick()'>Search</button>
+
+  <div class='results' *ngFor='let item of videos?.items'>
+    <h3>{{item.snippet.title}}</h3>
+    <!-- <video src='https://www.youtube.com/watch?v={{item.id.videoId}}'></video> -->
+    <img src= {{item.snippet.thumbnails.medium.url}}>
+    <div class='description'>
+      <h4>{{item.snippet.description}}</h4>
+    </div>
+    <div class='link'>
+      <a href='https://www.youtube.com/watch?v={{item.id.videoId}}'>Watch Video</a>
+    </div>
   </div>
 </div>
